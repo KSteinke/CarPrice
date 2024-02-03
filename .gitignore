@@ -1,4 +1,4 @@
 CarPrice_Server/bin/*
-CarPrice_Server/obj/Debug*
-CarPrice_Client/obj/Debug*
+CarPrice_Server/obj/*
+CarPrice_Client/obj/*
 CarPrice_Client/bin/*
