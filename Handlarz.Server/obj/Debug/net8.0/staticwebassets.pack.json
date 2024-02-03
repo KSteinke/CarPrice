@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Projekty\\Handlarz\\Handlarz.Server\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Handlarz.Server.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Handlarz.Server.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Projekty\\Handlarz\\Handlarz.Server\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "D:\\Projekty\\Handlarz\\Handlarz.Server\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Projekty\\Handlarz\\Handlarz.Server\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Projekty\\Handlarz\\Handlarz.Server\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Handlarz.Server.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Handlarz.Server.props",
+      "PackagePath": "build\\Handlarz.Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Handlarz.Server.props",
+      "PackagePath": "buildMultiTargeting\\Handlarz.Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Handlarz.Server.props",
+      "PackagePath": "buildTransitive\\Handlarz.Server.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

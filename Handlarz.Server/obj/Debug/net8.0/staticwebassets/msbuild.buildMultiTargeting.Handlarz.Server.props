@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Handlarz.Server.props" />
+</Project>
