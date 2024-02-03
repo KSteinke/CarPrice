@@ -1,0 +1,4 @@
+CarPrice.Server/bin/*
+CarPrice.Server/obj/*
+CarPrice.Client/obj/*
+CarPrice.Client/bin/*
