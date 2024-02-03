@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarPrice_Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea70f8fcfa1de6b066600f3f37f7b56caff18fb4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b65a8f8304ecbd13a10390e870a83e6d9a3520ee")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarPrice_Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarPrice_Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
