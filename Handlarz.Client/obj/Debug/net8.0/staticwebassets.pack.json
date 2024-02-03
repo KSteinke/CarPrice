@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Projekty\\Handlarz\\Handlarz.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "D:\\Projekty\\Handlarz\\Handlarz.Client\\obj\\Debug\\net8.0\\compressed\\jnl0mw8q8j.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Handlarz.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Handlarz.Client.props",
+      "PackagePath": "build\\Handlarz.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Handlarz.Client.props",
+      "PackagePath": "buildMultiTargeting\\Handlarz.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Handlarz.Client.props",
+      "PackagePath": "buildTransitive\\Handlarz.Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
