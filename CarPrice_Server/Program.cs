@@ -1,6 +1,8 @@
 using CarPrice_Server.Components;
+using CarPrice_Server.Data;
 using CarPrice_Client;
 using System.Net;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
-    
+
+// Add database connection
+builder.Services.AddDbContextPool<CarPriceDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString")));
 
 var app = builder.Build();
 
