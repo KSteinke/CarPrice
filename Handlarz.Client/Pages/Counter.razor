@@ -1,5 +1,11 @@
 ﻿@page "/counter"
-@rendermode InteractiveWebAssembly
+
+<div id="loading-message">
+  Loading...
+</div>
+
+@rendermode @(new InteractiveWebAssemblyRenderMode(prerender: false))
+
 <PageTitle>Counter</PageTitle>
 
 <h1>Counter</h1>
