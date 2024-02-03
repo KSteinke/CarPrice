@@ -1,4 +1,5 @@
 CarPrice_Server/bin/*
 CarPrice_Server/obj/*
 CarPrice_Client/obj/*
+CarPrice_Client/obj/Debug/*
 CarPrice_Client/bin/*
