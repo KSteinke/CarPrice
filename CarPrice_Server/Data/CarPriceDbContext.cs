@@ -1,8 +1,7 @@
 using CarPrice_Server.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace CarPrice_Server.Data
-{
+namespace CarPrice_Server.Data;
     public class CarPriceDbContext:DbContext
     {
         public CarPriceDbContext(DbContextOptions<CarPriceDbContext> options):base(options) 
@@ -15,6 +14,3 @@ namespace CarPrice_Server.Data
         public DbSet<Engine> Engines {get; set;}
         public DbSet<Voivoidship> Voivoidships {get; set;}
     }
-
-    
-}
