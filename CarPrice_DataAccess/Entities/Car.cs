@@ -1,4 +1,4 @@
-namespace CarPrice_Server.Entities
+namespace CarPrice_DataAccess.Entities
 {
     public class Car
     {

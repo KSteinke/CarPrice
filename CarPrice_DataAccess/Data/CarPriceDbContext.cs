@@ -1,4 +1,4 @@
-using CarPrice_Server.Entities;
+using CarPrice_DataAccess.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace CarPrice_Server.Data;
