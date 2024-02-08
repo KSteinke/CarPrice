@@ -1,8 +1,7 @@
-namespace CarPrice_DataAccess.Entities
-{
+namespace CarPrice_DataAccess.Entities;
     public class Car
     {
-        public int Id {get; set;}
+        public Guid Id {get; set;}
         public string? CarBrand {get; set;}
         public string? Model {get; set;}
         public int ProdYear {get; set;}
@@ -11,5 +10,3 @@ namespace CarPrice_DataAccess.Entities
         public Engine Engine {get; set;}
         public List<Record> Records {get; set;}
     }
-
-}

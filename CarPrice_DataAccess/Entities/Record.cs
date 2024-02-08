@@ -1,8 +1,7 @@
-namespace CarPrice_Server.Entities
-{
+namespace CarPrice_DataAccess.Entities;
     public class Record
     {
-        public int Id {get; set;}
+        public Guid Id {get; set;}
         public DateTime Date {get; set;}
         public int AvgPrice {get; set;}
         public int MaxPrice {get; set;}
@@ -12,4 +11,3 @@ namespace CarPrice_Server.Entities
         public Car? Car {get; set;}
         public Voivoidship Voivoidship {get; set;}
     }
-}
