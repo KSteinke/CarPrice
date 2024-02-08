@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarPrice_Server", "CarPrice
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarPrice_Client", "CarPrice_Client\CarPrice_Client.csproj", "{B85B25CE-CD37-4E94-BC5D-4855D0ECE4B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarPrice_DataAccess", "CarPrice_DataAccess\CarPrice_DataAccess.csproj", "{A9707ABC-559B-4A94-AE6B-87C6813E58CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{B85B25CE-CD37-4E94-BC5D-4855D0ECE4B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B85B25CE-CD37-4E94-BC5D-4855D0ECE4B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B85B25CE-CD37-4E94-BC5D-4855D0ECE4B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9707ABC-559B-4A94-AE6B-87C6813E58CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9707ABC-559B-4A94-AE6B-87C6813E58CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9707ABC-559B-4A94-AE6B-87C6813E58CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9707ABC-559B-4A94-AE6B-87C6813E58CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
