@@ -1,4 +1,4 @@
-namespace CarPrice_Server.Repositories.Interfaces
+namespace CarPrice_DataAccess.Repositories.Interfaces
 {
     public interface IEngineRepository
     {
