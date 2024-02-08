@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\CarPrice_DataAccess.props" />
-</Project>
