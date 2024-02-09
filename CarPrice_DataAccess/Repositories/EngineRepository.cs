@@ -1,8 +1,8 @@
-using CarPrice_Server.Repositories.Interfaces;
+using CarPrice_DataAccess.Repositories.Interfaces;
 
-namespace CarPrice_Server.Repositories
+namespace CarPrice_DataAccess.Repositories
 {
-    public interface EngineRepository:IEngineRepository
+    public class EngineRepository:IEngineRepository
     {
         
     }
