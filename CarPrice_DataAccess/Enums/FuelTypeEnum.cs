@@ -1,6 +1,6 @@
 namespace CarPrice_DataAccess.Enums;
 
-public enum FuelType 
+public enum FuelTypeEnum 
 {
     Diesel,
     Gasoline,
