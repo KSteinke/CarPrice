@@ -1,3 +1,5 @@
+using CarPrice_DataAccess.Repositories;
+using CarPrice_DataAccess.Repositories.Interfaces;
 using CarPrice_Server.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 // Add database connection
 builder.Services.AddDbContextPool<CarPriceDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString")));
+builder.Services.AddScoped<ICarRepository, CarRepository>();
 
 var app = builder.Build();
 
