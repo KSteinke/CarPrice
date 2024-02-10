@@ -13,7 +13,8 @@ public enum MilageGroupEnum
     Less50k,
     Between50k_100k,
     Between100k_200k,
-    More200k
+    Between200k_300k,
+    More300k
 }
 
 public enum CarozzeriaEnum

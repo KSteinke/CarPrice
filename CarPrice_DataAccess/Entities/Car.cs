@@ -7,7 +7,7 @@ namespace CarPrice_DataAccess.Entities;
         public string CarBrand {get; set;}
         public string Model {get; set;}
         public int ProdYear {get; set;}
-        public string Carozzeria {get; set;}
+        public CarozzeriaEnum Carozzeria {get; set;}
         public MilageGroupEnum MilageGroup {get; set;}
         public Engine Engine {get; set;}
         public List<Record> Records {get; set;}

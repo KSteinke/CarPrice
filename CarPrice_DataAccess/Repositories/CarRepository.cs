@@ -2,8 +2,7 @@ using CarPrice_DataAccess.Repositories.Interfaces;
 using CarPrice_Server.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace CarPrice_DataAccess.Repositories
-{
+namespace CarPrice_DataAccess.Repositories;
     public class CarRepository : ICarRepository
     {
         private readonly CarPriceDbContext _carPriceDbContext;
@@ -39,5 +38,6 @@ namespace CarPrice_DataAccess.Repositories
                 return Enumerable.Empty<string>();
             }
         }
+
+        
     }
-}
