@@ -1,4 +1,4 @@
-namespace CarPrice_DataAccess.Enums;
+namespace CarPrice_Models.Enums;
 
 public enum VoivoidshipEnum
 {

@@ -1,6 +1,7 @@
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
+using CarPrice_Models.Dtos;
 
 namespace CarPrice_DataAccess.Controllers;
 [Route("api/v1/[controller]")]
@@ -9,7 +10,7 @@ public class RecordController : ControllerBase
 {       
         [HttpGet]
         [Route("GetRecords")]
-        public async Task<ActionResult<IEnumerable<RecordDto>>> GetRecords([FromBody] )
+        public async Task<ActionResult<IEnumerable<GetRecordsDto>>> GetRecords([FromForm] CarDto)
         {
             try
             {

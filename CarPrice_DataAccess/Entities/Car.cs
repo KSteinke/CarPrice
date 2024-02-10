@@ -1,4 +1,4 @@
-using CarPrice_DataAccess.Enums;
+using CarPrice_Models.Enums;
 
 namespace CarPrice_DataAccess.Entities;
     public class Car
