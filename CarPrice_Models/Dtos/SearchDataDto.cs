@@ -9,6 +9,7 @@ public class SearchDataDto
     public CarozzeriaEnum Carozzeria {get; set;}
     public MilageGroupEnum MilageGroup {get; set;}
     public FuelTypeEnum FuelType {get; set;}
-    public int Volume {get; set;} 
-    public int Power {get; set;}
+    public string Volume {get; set;}
+    public string Power {get; set;}
+    public VoivoidshipEnum VoivoidshipName {get; set;}
 }

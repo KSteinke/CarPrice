@@ -9,6 +9,5 @@ public class GetRecordsDto
     public int MinPrice {get; set;}
     public int MedianPrice {get; set;}
     public int OffersNuber {get; set;}
-    public VoivoidshipEnum VoivoidshipName {get; set;}
 
 }

@@ -2,6 +2,7 @@ namespace CarPrice_Models.Enums;
 
 public enum MilageGroupEnum
 {
+    All,
     Less50k,
     Between50k_100k,
     Between100k_200k,
@@ -11,6 +12,7 @@ public enum MilageGroupEnum
 
 public enum CarozzeriaEnum
 {
+    All,
     Small,
     City,
     Coupe,
