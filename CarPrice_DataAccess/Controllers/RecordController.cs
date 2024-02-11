@@ -10,11 +10,11 @@ public class RecordController : ControllerBase
 {       
         [HttpGet]
         [Route("GetRecords")]
-        public async Task<ActionResult<IEnumerable<GetRecordsDto>>> GetRecords([FromForm] CarDto)
+        public async Task<ActionResult<IEnumerable<GetRecordsDto>>> GetRecords([FromForm] SearchDataDto searchDataDto)
         {
             try
             {
-
+                
             }
             catch(Exception)
             {
