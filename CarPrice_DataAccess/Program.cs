@@ -1,5 +1,8 @@
 using CarPrice_DataAccess.Repositories;
 using CarPrice_DataAccess.Repositories.Interfaces;
+using CarPrice_DataAccess.Services;
+using CarPrice_DataAccess.Services.Interfaces;
+using CarPrice_Models.Dtos;
 using CarPrice_Server.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +17,7 @@ builder.Services.AddSwaggerGen();
 // Add database connection
 builder.Services.AddDbContextPool<CarPriceDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString")));
 builder.Services.AddScoped<ICarRepository, CarRepository>();
+builder.Services.AddScoped<IGetRecordsQueryBuilderService, GetRecordsQueryBuilderService>();
 
 var app = builder.Build();
 

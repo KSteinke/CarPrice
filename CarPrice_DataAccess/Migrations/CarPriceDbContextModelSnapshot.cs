@@ -29,18 +29,20 @@ namespace CarPrice_DataAccess.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CarBrand")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Carozzeria")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Carozzeria")
+                        .HasColumnType("int");
 
                     b.Property<Guid>("EngineId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("MilageGroup")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("MilageGroup")
+                        .HasColumnType("int");
 
                     b.Property<string>("Model")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ProdYear")

@@ -1,0 +1,12 @@
+D:\Projekty\CarPrice\CarPrice_Models\bin\Debug\net8.0\CarPrice_Models.deps.json
+D:\Projekty\CarPrice\CarPrice_Models\bin\Debug\net8.0\CarPrice_Models.dll
+D:\Projekty\CarPrice\CarPrice_Models\bin\Debug\net8.0\CarPrice_Models.pdb
+D:\Projekty\CarPrice\CarPrice_Models\obj\Debug\net8.0\CarPrice_Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekty\CarPrice\CarPrice_Models\obj\Debug\net8.0\CarPrice_Models.AssemblyInfoInputs.cache
+D:\Projekty\CarPrice\CarPrice_Models\obj\Debug\net8.0\CarPrice_Models.AssemblyInfo.cs
+D:\Projekty\CarPrice\CarPrice_Models\obj\Debug\net8.0\CarPrice_Models.csproj.CoreCompileInputs.cache
+D:\Projekty\CarPrice\CarPrice_Models\obj\Debug\net8.0\CarPrice_Models.sourcelink.json
+D:\Projekty\CarPrice\CarPrice_Models\obj\Debug\net8.0\CarPrice_Models.dll
+D:\Projekty\CarPrice\CarPrice_Models\obj\Debug\net8.0\refint\CarPrice_Models.dll
+D:\Projekty\CarPrice\CarPrice_Models\obj\Debug\net8.0\CarPrice_Models.pdb
+D:\Projekty\CarPrice\CarPrice_Models\obj\Debug\net8.0\ref\CarPrice_Models.dll

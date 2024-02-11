@@ -1583,6 +1583,16 @@
             "rid": "win"
           }
         }
+      },
+      "CarPrice_Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/CarPrice_Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CarPrice_Models.dll": {}
+        }
       }
     }
   },
@@ -4453,10 +4463,16 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "CarPrice_Models/1.0.0": {
+      "type": "project",
+      "path": "../CarPrice_Models/CarPrice_Models.csproj",
+      "msbuildProject": "../CarPrice_Models/CarPrice_Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "CarPrice_Models >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 8.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.1",
@@ -4495,7 +4511,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Projekty\\CarPrice\\CarPrice_Models\\CarPrice_Models.csproj": {
+              "projectPath": "D:\\Projekty\\CarPrice\\CarPrice_Models\\CarPrice_Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

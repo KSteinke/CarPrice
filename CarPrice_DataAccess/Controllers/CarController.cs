@@ -29,15 +29,39 @@ public class CarController : ControllerBase
                 return NotFound();
             }
             else
-            {
-                return Ok(carBrands);                                                   
+            { 
+                return Ok(carBrands);
             }
         }
         catch(Exception)
         {
-            return StatusCode(500, "Error retrieving car brand data from database.");   //Internal Server Error Status Code
+            //Internal Server Error Status Code
+            return StatusCode(500, "Error retrieving car brand data from database.");   
         }
-    }   
+    }
 
+    //TODO - Add data validation
+    [HttpGet]
+    [Route("GetCarModels")]
+    public async Task<ActionResult<IEnumerable<string>>> GetCarModel([FromQuery] string carBrands)
+    {
+        try
+        {
+            var carModels = await _carRepository.GetCarModels(carBrands);
+            if(carModels.IsNullOrEmpty())
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(carModels);
+            }
+        }
+        catch(Exception)
+        {
+            //Internal Server Error Status Code
+            return StatusCode(500, $"Error retrieving car models of {carBrands} brand.");
+        }
+    }
 
 }
