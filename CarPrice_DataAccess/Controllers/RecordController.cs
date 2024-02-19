@@ -39,4 +39,18 @@ public class RecordController : ControllerBase
                 return StatusCode(500, "Error retrieving data from database."); 
             }
         }
+
+        [HttpPost]
+        [Route("UploadRecord")]
+        public async Task<ActionResult> UploadRecord([FromForm] UploadRecordDto uploadRecordDto)
+        {
+            try
+            {
+                
+            }
+            catch(Exception)
+            {
+
+            }
+        }
 }

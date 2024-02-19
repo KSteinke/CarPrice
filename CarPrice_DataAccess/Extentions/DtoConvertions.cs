@@ -9,7 +9,7 @@ public static class DtoConvertions
     {
 
         IEnumerable<GetRecordsDto> getRecordsDto = (from record in records
-                                                    select new GetRecordsDto
+                                                    select new GetRecordsDto(default, default, default, default, default, default, default)
                                                     {
                                                         Id = record.Id,
                                                         Date = record.Date,
