@@ -44,6 +44,17 @@ namespace CarPrice_DataAccess.Repositories;
             return getRecordsDtos;
         }
 
-        public async Task UploadRecord([FromForm])
+        public async Task UploadRecord([FromBody] UploadRecordDto uploadRecordDto)
+        {
+            var car = await _carPriceDbContext.Cars.Where(c => c.Id == uploadRecordDto.CarId).FirstOrDefaultAsync();
+            if(car == null)
+            {
+                //TODO - Add wrong task
+            }
+
+            var record = uploadRecordDto.ConvertFromDto(car); //TODO conver from DTO voivoidship Update
+            var result = await _carPriceDbContext.Records.AddAsync(record);
+            await _carPriceDbContext.SaveChangesAsync();
+        }
 
     }

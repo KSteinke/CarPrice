@@ -21,4 +21,22 @@ public static class DtoConvertions
                                                     });
         return getRecordsDto;
     }
+
+
+    public static Record ConvertFromDto(this UploadRecordDto uploadRecordDto, Car car)
+    {
+        Record record = new()
+        {
+            Date = uploadRecordDto.Date,
+            AvgPrice = uploadRecordDto.AvgPrice,
+            MaxPrice = uploadRecordDto.MaxPrice,
+            MinPrice = uploadRecordDto.MinPrice,
+            MedianPrice = uploadRecordDto.MedianPrice,
+            OffersNuber = uploadRecordDto.OffersNuber,
+            Car = car,
+            //TO DO - Add voivoidship
+        };
+
+        return record;
+    }
 }
