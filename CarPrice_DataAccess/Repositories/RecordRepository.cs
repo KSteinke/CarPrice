@@ -4,6 +4,7 @@ using CarPrice_DataAccess.Repositories.Interfaces;
 using CarPrice_DataAccess.Services.Interfaces;
 using CarPrice_Models.Dtos;
 using CarPrice_Server.Data;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
@@ -42,4 +43,7 @@ namespace CarPrice_DataAccess.Repositories;
             
             return getRecordsDtos;
         }
+
+        public async Task UploadRecord([FromForm])
+
     }

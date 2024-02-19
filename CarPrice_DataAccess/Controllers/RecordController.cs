@@ -19,7 +19,7 @@ public class RecordController : ControllerBase
 
         [HttpGet]
         [Route("GetRecords")]
-        public async Task<ActionResult<IEnumerable<GetRecordsDto>>> GetRecords([FromForm] SearchDataDto searchDataDto)
+        public async Task<ActionResult<IEnumerable<GetRecordsDto>>> GetRecords([FromBody] SearchDataDto searchDataDto)
         {
             try
             {
@@ -42,7 +42,7 @@ public class RecordController : ControllerBase
 
         [HttpPost]
         [Route("UploadRecord")]
-        public async Task<ActionResult> UploadRecord([FromForm] UploadRecordDto uploadRecordDto)
+        public async Task<ActionResult> UploadRecord([FromBody] UploadRecordDto uploadRecordDto)
         {
             try
             {
