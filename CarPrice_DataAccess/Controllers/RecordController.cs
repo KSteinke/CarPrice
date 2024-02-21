@@ -17,20 +17,20 @@ public class RecordController : ControllerBase
             _recordRepository = recordRepository;
         }
 
-        [HttpGet]
-        [Route("GetRecords")]
-        public async Task<ActionResult<IEnumerable<GetRecordsDto>>> GetRecords([FromBody] SearchDataDto searchDataDto)
+        [HttpPost]
+        [Route("PostRecords")]
+        public async Task<ActionResult<IEnumerable<PostRecordsDto>>> PostRecords([FromBody] SearchDataDto searchDataDto)
         {
             try
             {
-                var getRecordsDtos = await _recordRepository.GetRecords(searchDataDto);
-                if(getRecordsDtos.IsNullOrEmpty())
+                var postRecordsDtos = await _recordRepository.PostRecords(searchDataDto);
+                if(postRecordsDtos.IsNullOrEmpty())
                 {
                     return NotFound();
                 }
                 else
                 {
-                    return Ok(getRecordsDtos);
+                    return Ok(postRecordsDtos);
                 }
             }
             catch(Exception)
