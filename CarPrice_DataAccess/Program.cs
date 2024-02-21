@@ -17,6 +17,7 @@ builder.Services.AddSwaggerGen();
 // Add database connection
 builder.Services.AddDbContextPool<CarPriceDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString")));
 builder.Services.AddScoped<ICarRepository, CarRepository>();
+builder.Services.AddScoped<IRecordRepository, RecordRepository>();
 builder.Services.AddScoped<IGetRecordsQueryBuilderService, GetRecordsQueryBuilderService>();
 
 var app = builder.Build();

@@ -21,7 +21,7 @@ namespace CarPrice_DataAccess.Repositories;
             _getRecordsQueryBuilderService = getRecordsQueryBuilderService;
         }
 
-        public async Task<IEnumerable<GetRecordsDto>> GetRecords(SearchDataDto searchDataDto)
+        public async Task<IEnumerable<GetRecordsDto>> SearchRecords(SearchDataDto searchDataDto)
         {
             IQueryable<Record> query = _carPriceDbContext.Records;
             _getRecordsQueryBuilderService.BuildGetRecordsQuery(ref query, searchDataDto);
