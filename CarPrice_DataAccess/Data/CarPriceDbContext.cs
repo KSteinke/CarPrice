@@ -12,5 +12,5 @@ namespace CarPrice_Server.Data;
         public DbSet<Record> Records {get; set;}
         public DbSet<Car> Cars {get; set;}
         public DbSet<Engine> Engines {get; set;}
-        public DbSet<Voivoidship> Voivoidships {get; set;}
+        
     }

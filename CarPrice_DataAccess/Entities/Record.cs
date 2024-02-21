@@ -1,3 +1,5 @@
+using CarPrice_Models.Enums;
+
 namespace CarPrice_DataAccess.Entities;
     public class Record
     {
@@ -9,5 +11,5 @@ namespace CarPrice_DataAccess.Entities;
         public int MedianPrice {get; set;}
         public int OffersNuber {get; set;}
         public Car Car {get; set;}
-        public Voivoidship Voivoidship {get; set;}
+        public VoivoidshipEnum Voivoidship {get; set;}
     }

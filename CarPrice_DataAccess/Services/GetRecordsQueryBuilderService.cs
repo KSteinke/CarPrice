@@ -53,7 +53,7 @@ public class GetRecordsQueryBuilderService : IGetRecordsQueryBuilderService
 
         if(searchDataDto.VoivoidshipName != CarPrice_Models.Enums.VoivoidshipEnum.All)
         {
-            query.Where(r => r.Voivoidship.Name == searchDataDto.VoivoidshipName);
+            query.Where(r => r.Voivoidship == searchDataDto.VoivoidshipName);
         }
 
         return query;
