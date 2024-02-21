@@ -5,11 +5,11 @@ namespace CarPrice_DataAccess.Extentions;
 
 public static class DtoConvertions
 {
-    public static IEnumerable<PostRecordsDto> ConvertToGetRecordsDto(this IEnumerable<Record> records)
+    public static IEnumerable<GetRecordsDto> ConvertToGetRecordsDto(this IEnumerable<Record> records)
     {
 
-        IEnumerable<PostRecordsDto> getRecordsDto = (from record in records
-                                                    select new PostRecordsDto(default, default, default, default, default, default, default)
+        IEnumerable<GetRecordsDto> getRecordsDto = (from record in records
+                                                    select new GetRecordsDto(default, default, default, default, default, default, default)
                                                     {
                                                         Id = record.Id,
                                                         Date = record.Date,

@@ -5,7 +5,7 @@ namespace CarPrice_DataAccess.Repositories.Interfaces
 {
     public interface IRecordRepository
     {
-        Task<IEnumerable<PostRecordsDto>> PostRecords(SearchDataDto searchDataDto);
+        Task<IEnumerable<GetRecordsDto>> SearchRecords(SearchDataDto searchDataDto);
         Task<Record> UploadRecord(UploadRecordDto uploadRecordDto);
     }
 }

@@ -21,29 +21,29 @@ namespace CarPrice_DataAccess.Repositories;
             _getRecordsQueryBuilderService = getRecordsQueryBuilderService;
         }
 
-        public async Task<IEnumerable<PostRecordsDto>> PostRecords(SearchDataDto searchDataDto)
+        public async Task<IEnumerable<GetRecordsDto>> SearchRecords(SearchDataDto searchDataDto)
         {
             IQueryable<Record> query = _carPriceDbContext.Records;
             _getRecordsQueryBuilderService.BuildGetRecordsQuery(ref query, searchDataDto);
 
             if(query.IsNullOrEmpty())
             {
-                return Enumerable.Empty<PostRecordsDto>();
+                return Enumerable.Empty<GetRecordsDto>();
             }
 
             IEnumerable<Record> records = await query.ToListAsync();
             if(records.IsNullOrEmpty())
             {
-                return Enumerable.Empty<PostRecordsDto>();
+                return Enumerable.Empty<GetRecordsDto>();
             }
 
-            IEnumerable<PostRecordsDto> postRecordsDtos = records.ConvertToGetRecordsDto();
-            if(postRecordsDtos.IsNullOrEmpty())
+            IEnumerable<GetRecordsDto> getRecordsDtos = records.ConvertToGetRecordsDto();
+            if(getRecordsDtos.IsNullOrEmpty())
             {
-                return Enumerable.Empty<PostRecordsDto>();
+                return Enumerable.Empty<GetRecordsDto>();
             }
             
-            return postRecordsDtos;
+            return getRecordsDtos;
         }
 
         public async Task<Record> UploadRecord(UploadRecordDto uploadRecordDto)
