@@ -19,7 +19,7 @@ public class RecordController : ControllerBase
 
         [HttpGet]
         [Route("GetRecords")]
-        public async Task<ActionResult<IEnumerable<GetRecordsDto>>> GetRecords([FromForm] SearchDataDto searchDataDto)
+        public async Task<ActionResult<IEnumerable<GetRecordsDto>>> GetRecords([FromBody] SearchDataDto searchDataDto)
         {
             try
             {
@@ -37,6 +37,28 @@ public class RecordController : ControllerBase
             {
                 //Internal Server Error Status Code
                 return StatusCode(500, "Error retrieving data from database."); 
+            }
+        }
+
+        [HttpPost]
+        [Route("UploadRecord")]
+        public async Task<ActionResult> UploadRecord([FromBody] UploadRecordDto uploadRecordDto)
+        {
+            try
+            {
+                if(uploadRecordDto == null)
+                {
+                    return BadRequest();
+                }
+                
+                var result = await _recordRepository.UploadRecord(uploadRecordDto) ?? throw new InvalidOperationException("Error saving data from database.");  //Throw error if error during database save
+
+                return Ok();
+
+            }
+            catch(Exception ex)
+            {
+                return StatusCode(500, ex.Message); 
             }
         }
 }

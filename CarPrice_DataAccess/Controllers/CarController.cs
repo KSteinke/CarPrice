@@ -43,11 +43,11 @@ public class CarController : ControllerBase
     //TODO - Add data validation
     [HttpGet]
     [Route("GetCarModels")]
-    public async Task<ActionResult<IEnumerable<string>>> GetCarModel([FromQuery] string carBrands)
+    public async Task<ActionResult<IEnumerable<string>>> GetCarModels([FromQuery] string carBrand)
     {
         try
         {
-            var carModels = await _carRepository.GetCarModels(carBrands);
+            var carModels = await _carRepository.GetCarModels(carBrand);
             if(carModels.IsNullOrEmpty())
             {
                 return NotFound();
@@ -60,7 +60,7 @@ public class CarController : ControllerBase
         catch(Exception)
         {
             //Internal Server Error Status Code
-            return StatusCode(500, $"Error retrieving car models of {carBrands} brand.");
+            return StatusCode(500, $"Error retrieving car models of {carBrand} brand.");
         }
     }
 

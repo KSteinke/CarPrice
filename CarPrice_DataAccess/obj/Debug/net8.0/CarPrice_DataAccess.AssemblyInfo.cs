@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarPrice_DataAccess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3019f2e06c1f6a0db9a9e0979ae3766841b442c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+888f5c2d4a5d79c8933105931946f9218ca6003e")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarPrice_DataAccess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarPrice_DataAccess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

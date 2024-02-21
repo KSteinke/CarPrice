@@ -9,7 +9,7 @@ public static class DtoConvertions
     {
 
         IEnumerable<GetRecordsDto> getRecordsDto = (from record in records
-                                                    select new GetRecordsDto
+                                                    select new GetRecordsDto(default, default, default, default, default, default, default)
                                                     {
                                                         Id = record.Id,
                                                         Date = record.Date,
@@ -20,5 +20,23 @@ public static class DtoConvertions
                                                         OffersNuber = record.OffersNuber
                                                     });
         return getRecordsDto;
+    }
+
+
+    public static Record ConvertFromDto(this UploadRecordDto uploadRecordDto, Car car)
+    {
+        Record record = new()
+        {
+            Date = uploadRecordDto.Date,
+            AvgPrice = uploadRecordDto.AvgPrice,
+            MaxPrice = uploadRecordDto.MaxPrice,
+            MinPrice = uploadRecordDto.MinPrice,
+            MedianPrice = uploadRecordDto.MedianPrice,
+            OffersNuber = uploadRecordDto.OffersNuber,
+            Car = car,
+            //TO DO - Add voivoidship
+        };
+
+        return record;
     }
 }
