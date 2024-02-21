@@ -34,7 +34,7 @@ public static class DtoConvertions
             MedianPrice = uploadRecordDto.MedianPrice,
             OffersNuber = uploadRecordDto.OffersNuber,
             Car = car,
-            //TO DO - Add voivoidship
+            Voivoidship = uploadRecordDto.Voivoidship
         };
 
         return record;

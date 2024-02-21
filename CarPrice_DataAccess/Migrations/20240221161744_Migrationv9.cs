@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CarPrice_DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class DataAccessInitialMigration : Migration
+    public partial class Migrationv9 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -15,9 +15,8 @@ namespace CarPrice_DataAccess.Migrations
                 name: "Engines",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    FuelType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    FuelType = table.Column<int>(type: "int", nullable: false),
                     Volume = table.Column<int>(type: "int", nullable: false),
                     Power = table.Column<int>(type: "int", nullable: false)
                 },
@@ -27,30 +26,16 @@ namespace CarPrice_DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Voivoidships",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Voivoidships", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Cars",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    CarBrand = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Model = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CarBrand = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Model = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ProdYear = table.Column<int>(type: "int", nullable: false),
-                    Carozzeria = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    MilageGroup = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    EngineId = table.Column<int>(type: "int", nullable: false)
+                    Carozzeria = table.Column<int>(type: "int", nullable: false),
+                    MilageGroup = table.Column<int>(type: "int", nullable: false),
+                    EngineId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -67,16 +52,15 @@ namespace CarPrice_DataAccess.Migrations
                 name: "Records",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Date = table.Column<DateOnly>(type: "date", nullable: false),
                     AvgPrice = table.Column<int>(type: "int", nullable: false),
                     MaxPrice = table.Column<int>(type: "int", nullable: false),
                     MinPrice = table.Column<int>(type: "int", nullable: false),
                     MedianPrice = table.Column<int>(type: "int", nullable: false),
                     OffersNuber = table.Column<int>(type: "int", nullable: false),
-                    CarId = table.Column<int>(type: "int", nullable: true),
-                    VoivoidshipId = table.Column<int>(type: "int", nullable: false)
+                    CarId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Voivoidship = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -85,11 +69,6 @@ namespace CarPrice_DataAccess.Migrations
                         name: "FK_Records_Cars_CarId",
                         column: x => x.CarId,
                         principalTable: "Cars",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_Records_Voivoidships_VoivoidshipId",
-                        column: x => x.VoivoidshipId,
-                        principalTable: "Voivoidships",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -103,11 +82,6 @@ namespace CarPrice_DataAccess.Migrations
                 name: "IX_Records_CarId",
                 table: "Records",
                 column: "CarId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Records_VoivoidshipId",
-                table: "Records",
-                column: "VoivoidshipId");
         }
 
         /// <inheritdoc />
@@ -118,9 +92,6 @@ namespace CarPrice_DataAccess.Migrations
 
             migrationBuilder.DropTable(
                 name: "Cars");
-
-            migrationBuilder.DropTable(
-                name: "Voivoidships");
 
             migrationBuilder.DropTable(
                 name: "Engines");

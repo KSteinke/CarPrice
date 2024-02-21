@@ -84,11 +84,11 @@ namespace CarPrice_DataAccess.Migrations
                     b.Property<int>("AvgPrice")
                         .HasColumnType("int");
 
-                    b.Property<Guid?>("CarId")
+                    b.Property<Guid>("CarId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("datetime2");
+                    b.Property<DateOnly>("Date")
+                        .HasColumnType("date");
 
                     b.Property<int>("MaxPrice")
                         .HasColumnType("int");
@@ -102,30 +102,14 @@ namespace CarPrice_DataAccess.Migrations
                     b.Property<int>("OffersNuber")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("VoivoidshipId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("Voivoidship")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CarId");
 
-                    b.HasIndex("VoivoidshipId");
-
                     b.ToTable("Records");
-                });
-
-            modelBuilder.Entity("CarPrice_DataAccess.Entities.Voivoidship", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Name")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Voivoidships");
                 });
 
             modelBuilder.Entity("CarPrice_DataAccess.Entities.Car", b =>
@@ -143,17 +127,11 @@ namespace CarPrice_DataAccess.Migrations
                 {
                     b.HasOne("CarPrice_DataAccess.Entities.Car", "Car")
                         .WithMany("Records")
-                        .HasForeignKey("CarId");
-
-                    b.HasOne("CarPrice_DataAccess.Entities.Voivoidship", "Voivoidship")
-                        .WithMany("Records")
-                        .HasForeignKey("VoivoidshipId")
+                        .HasForeignKey("CarId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Car");
-
-                    b.Navigation("Voivoidship");
                 });
 
             modelBuilder.Entity("CarPrice_DataAccess.Entities.Car", b =>
@@ -164,11 +142,6 @@ namespace CarPrice_DataAccess.Migrations
             modelBuilder.Entity("CarPrice_DataAccess.Entities.Engine", b =>
                 {
                     b.Navigation("Cars");
-                });
-
-            modelBuilder.Entity("CarPrice_DataAccess.Entities.Voivoidship", b =>
-                {
-                    b.Navigation("Records");
                 });
 #pragma warning restore 612, 618
         }
