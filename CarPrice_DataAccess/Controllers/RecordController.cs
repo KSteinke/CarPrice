@@ -46,11 +46,19 @@ public class RecordController : ControllerBase
         {
             try
             {
+                if(uploadRecordDto == null)
+                {
+                    return BadRequest();
+                }
                 
-            }
-            catch(Exception)
-            {
+                var result = await _recordRepository.UploadRecord(uploadRecordDto) ?? throw new InvalidOperationException("Error saving data from database.");  //Throw error if error during database save
 
+                return Ok();
+
+            }
+            catch(Exception ex)
+            {
+                return StatusCode(500, ex.Message); 
             }
         }
 }
