@@ -10,16 +10,3 @@ public enum MilageGroupEnum
     More300k
 }
 
-public enum CarozzeriaEnum
-{
-    All,
-    Small,
-    City,
-    Coupe,
-    Cabrio,
-    Combi,
-    Compact,
-    Minivan,
-    Sedan,
-    Suv
-}
