@@ -8,16 +8,15 @@ public class GetRecordsQueryBuilderService : IGetRecordsQueryBuilderService
 {
     public IQueryable<Record> BuildGetRecordsQuery(ref IQueryable<Record> query, SearchDataDto searchDataDto)
     {
+        query.Where(r=> r.Car.CarBrand == searchDataDto.CarBrand);
+
         query.Where(r => r.Car.Model == searchDataDto.Model);
 
-        if(searchDataDto.Carozzeria != CarPrice_Models.Enums.CarozzeriaEnum.All)
-        {
-            query.Where(r => r.Car.Carozzeria == searchDataDto.Carozzeria);
-        }
+        query.Where(r => r.CarProdYear == searchDataDto.ProdYear);
 
         if(searchDataDto.MilageGroup != CarPrice_Models.Enums.MilageGroupEnum.All)
         {
-            query.Where(r => r.Car.MilageGroup == searchDataDto.MilageGroup);
+            query.Where(r => r.MilageGroup == searchDataDto.MilageGroup);
         }
 
         if(searchDataDto.FuelType != CarPrice_Models.Enums.FuelTypeEnum.All)
@@ -31,19 +30,6 @@ public class GetRecordsQueryBuilderService : IGetRecordsQueryBuilderService
             if(int.TryParse(searchDataDto.Volume, out volume))
             {
                 query.Where(r => r.Car.Engine.Volume == volume);
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-        if(searchDataDto.Power != "All")
-        {
-            int power;
-            if(int.TryParse(searchDataDto.Power, out power))
-            {
-                query.Where(r => r.Car.Engine.Power == power);
             }
             else
             {

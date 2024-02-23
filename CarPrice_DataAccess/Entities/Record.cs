@@ -9,6 +9,8 @@ namespace CarPrice_DataAccess.Entities;
         public int MaxPrice {get; set;}
         public int MinPrice {get; set;}
         public int MedianPrice {get; set;}
+        public int CarProdYear {get; set;}
+        public MilageGroupEnum MilageGroup {get; set;}
         public int OffersNuber {get; set;}
         public Car Car {get; set;}
         public VoivoidshipEnum Voivoidship {get; set;}

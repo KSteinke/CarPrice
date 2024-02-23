@@ -4,6 +4,7 @@ using CarPrice_Server.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CarPrice_DataAccess.Migrations
 {
     [DbContext(typeof(CarPriceDbContext))]
-    partial class CarPriceDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240223191604_Migrationv10")]
+    partial class Migrationv10
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
