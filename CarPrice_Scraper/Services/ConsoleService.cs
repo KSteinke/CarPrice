@@ -18,7 +18,7 @@ public class ConsoleService : IConsoleService
             timer?.Change(TimeSpan.Zero, TimeSpan.FromSeconds(30));
             if (timer == null || timer.Equals(null))
             {
-                // Timer nie był uruchomiony wcześniej, więc uruchamiamy go teraz
+                //Start of the timer
                 timer = new Timer(ShowMessage, null, TimeSpan.Zero, TimeSpan.FromSeconds(30));
             }
         }

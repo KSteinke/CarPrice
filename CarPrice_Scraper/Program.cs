@@ -9,6 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IConsoleService, ConsoleService>();
+builder.Services.AddSingleton<IScraperService, ManualScraperService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

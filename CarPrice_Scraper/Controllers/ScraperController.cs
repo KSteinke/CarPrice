@@ -1,29 +1,39 @@
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Hosting;
-using System.Threading.Tasks;
 
-[ApiController]
+using CarPrice_Scraper.Services.Interfaces;
+using Microsoft.AspNetCore.Mvc;
+
 [Route("api/[controller]")]
+[ApiController]
 public class ScraperController : ControllerBase
 {
-    private readonly IHostedService _scraperService;
+    private readonly IScraperService _scraperService;
 
-    public ScraperController(IHostedService scraperService)
+    public ScraperController(IScraperService scraperService)
     {
         _scraperService = scraperService;
     }
-
-    [HttpPost("start")]
-    public IActionResult StartScraperService()
+    
+    [HttpGet]
+    [Route("status")]
+    public async Task<ActionResult<bool>> GetStatus()
     {
-        if (_scraperService is ScraperService scraperService)
-        {
-            scraperService.StartAsync(default).Wait(); 
-            return Ok("Background service started.");
-        }
-        else
-        {
-            return BadRequest("Background service not found.");
-        }
+        return Ok(await _scraperService.IsRunning());
     }
+
+    [HttpPost]
+    [Route("start")]
+    public async Task<ActionResult> StartService()
+    {
+        await _scraperService.Start();
+        return Ok();
+    }
+
+    [HttpPost]
+    [Route("stop")]
+    public async Task<ActionResult> StopService()
+    {
+        await _scraperService.Stop();
+        return Ok();
+    }
+    
 }
