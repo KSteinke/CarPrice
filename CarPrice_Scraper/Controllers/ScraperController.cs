@@ -24,8 +24,16 @@ public class ScraperController : ControllerBase
     [Route("start")]
     public async Task<ActionResult> StartService()
     {
-        await _scraperService.Start();
-        return Ok();
+        try
+        {
+            await _scraperService.Start();
+            return Ok();
+        }
+        catch(Exception ex)
+        {
+            return StatusCode(500, ex.Message);
+        }
+        
     }
 
     [HttpPost]
