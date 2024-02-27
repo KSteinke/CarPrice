@@ -25,8 +25,7 @@ public class ManualScraperService : IScraperService
     {
         try
         {
-            //TODO - implement HarvestHandler
-            //_harvestHandler.StartHarvesting();
+            await _harvestHandler.HandleHarvesting();
         }
         catch (Exception)
         {
