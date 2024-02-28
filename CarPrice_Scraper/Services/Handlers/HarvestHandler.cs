@@ -18,11 +18,12 @@ public class HarvestHandler : IHarvestHandler
         try
         {
             var harvestResult = await _harvester.HarvestData();
-            await _dataSelectorHandler.AlignData(harvestResult);
+            await _dataSelectorHandler.HandleRawData(harvestResult);
         }
         catch(Exception ex)
         {
             throw new Exception("Error in Harvest Handling.");
         }
+
     }
 }
