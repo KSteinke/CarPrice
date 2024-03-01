@@ -11,5 +11,8 @@
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
+  <ItemGroup>
+  <ProjectReference Include="D:\Projekty\CarPrice\CarPrice_Models\CarPrice_Models.csproj" />
+  </ItemGroup>
 
 </Project>
