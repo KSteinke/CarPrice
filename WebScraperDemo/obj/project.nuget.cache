@@ -1,8 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "/2pFsljqtMQ6FUkf6XFWUvTnNe/z0udJyZKW0gV6XJhPo0A4DvFNofxxQ43OyuSi5D94NCTtJ8w7iFx7+FBuGA==",
+  "dgSpecHash": "epningISQCmhLwTECw9sv8CQWrzn0YHqKLhLkqScvTGx4dFt47yems8Qcs9Nx5/tQRTXpuZvLEvvLLkWLP+ysg==",
   "success": true,
   "projectFilePath": "D:\\Projekty\\CarPrice\\WebScraperDemo\\WebScraperDemo.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\kacpe\\.nuget\\packages\\htmlagilitypack\\1.11.59\\htmlagilitypack.1.11.59.nupkg.sha512",
+    "C:\\Users\\kacpe\\.nuget\\packages\\htmlagilitypack.cssselectors\\1.0.2\\htmlagilitypack.cssselectors.1.0.2.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Pakiet „HtmlAgilityPack.CssSelectors 1.0.2” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1” zamiast platformy docelowej projektu „net8.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
+      "libraryId": "HtmlAgilityPack.CssSelectors",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

@@ -12,4 +12,9 @@
   <ProjectReference Include="D:\Projekty\CarPrice\CarPrice_Models\CarPrice_Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.59" />
+    <PackageReference Include="HtmlAgilityPack.CssSelectors" Version="1.0.2" />
+  </ItemGroup>
+
 </Project>
